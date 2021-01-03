@@ -1,9 +1,3 @@
-let quarterOne = document.querySelectorAll("#q1");
-let quarterTwo = document.querySelectorAll("#q2");
-let quarterThree = document.querySelectorAll("#q3");
-let quarterFour = document.querySelectorAll("#q4");
-
-
 const getMonthNum = (month) => {
     if (month === "January") {
         return 1;
@@ -32,28 +26,24 @@ const getMonthNum = (month) => {
     }
 }
 
-const toggleDirection = () => {
-    let states = ["lowest", "highest", "chron"];
-
+const filterByQuarter = (e) => {
+    let checkbox = e.target;
+    let toggleClass = '.' + checkbox.value;
+    let toShow = document.querySelectorAll(`${toggleClass}`);
+    console.log(toShow);
+    for (let i = 0; i < toShow.length; i++) {
+        toShow[i].style.display = checkbox.checked ? 'table-row' : 'none';
+    }
 }
 
-const filterTable = () => {
-    let checkbox = document.getElementById("q1-checkbox");
-    checkbox.addEventListener("change", function (e) {
-        e.preventDefault();
-        if (checkbox.checked) {
-            for (let i = 0; i < table.rows.length; i++) {
-                if (table.rows = !document.getElementById("q1")) {
-
-                } else {
-
-                }
-            }
-        }
-    })
+const inputs = document.querySelectorAll("input");
+for (let i = 0; i < inputs.length; i++) {
+    inputs[i].checked = true;
+    inputs[i].addEventListener('change', filterByQuarter);
 }
 
-function sortByPerson() {
+
+const sortByPerson = () => {
     let switchCount = 0;
     let table = document.getElementById("sales-table");
     let switching = true;
@@ -92,11 +82,12 @@ function sortByPerson() {
     }
 }
 
-function sortBySales(dir) {
+const sortBySales = () => {
     let switchCount = 0;
     let table = document.getElementById("sales-table");
     let switching = true;
-    let shouldSwitch; 
+    let shouldSwitch;
+    let dir = "lowest";
     while (switching) {
         switching = false;
         rows = table.rows;
@@ -135,7 +126,7 @@ function sortBySales(dir) {
                 dir = "chron";
                 switching = true;
             }
-        } 
+        }
     }
 }
 
