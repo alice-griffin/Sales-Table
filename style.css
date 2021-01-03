@@ -88,7 +88,7 @@ nav {
     background-color: #3f49ec;
     text-align: center;
     line-height: 15px;
-    color: #ffffff;   
+    color: #ffffff; 
 }
 
 /* ---- sales and filter by input ----- */
@@ -155,6 +155,15 @@ h1 {
 
 .table-container {
     padding: 10px; 
+}
+
+.sales-header, .salesperson-header {
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+.sales-header:hover, .salesperson-header:hover {
+    opacity: 0.8; 
 }
 
 /* ----- desktop styling -----  */

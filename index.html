@@ -5,121 +5,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Sales Page</title>
 </head>
 
 <body>
-    <div class="parent-container">
-        <nav>
-            <div class="logo">
-                <h2><a href="#">Company</a></h2>
-            </div>
-            <div class="links">
-                <ul>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Sales</a></li>
-                    <li><a href="#">Messages<div class="msg-wrapper"><span class="msg-number">3</span></div></a></li>
-                </ul>
-                <button>Sign Out</button>
-            </div>
-        </nav>
+    <main>
+        <div class="parent-container">
+            <nav>
+                <div class="logo">
+                    <h2><a href="#">Company</a></h2>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Sales</a></li>
+                        <li><a href="#">Messages<div class="msg-wrapper"><span class="msg-number">3</span></div></a>
+                        </li>
+                    </ul>
+                    <button>Sign Out</button>
+                </div>
+            </nav>
 
-        <div class="sales-container">
-            <h1>Sales</h1>
-            <div class="filter-labels">
-                <ul>
-                    <li>Filter by quarter:</li>
-                    <li>
-                        <input type="checkbox" id="checkbox" value="q1">
-                        <label for="q1=checkbox">Q1</label>
-                    <li>
-                        <input type="checkbox" id="checkbox" value="q2">
-                        <label for="q2-checkbox">Q2</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox" value="q3">
-                        <label for="q3-checkbox">Q3</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox" value="q4">
-                        <label for="q4-checkbox">Q4</label>
-                    </li>
-                </ul>
-            </div>
-            <div class="table-container">
-                <div class="table-wrapper">
-                    <table class="sales-table" id="sales-table">
-                        <tr>
-                            <th>Month</th>
-                            <th class="sales-header" onclick="sortBySales()">Sales</th>
-                            <th class="salesperson-header" onclick="sortByPerson()">Top Salesperson</th>
-                        </tr>
-                        <tr class="q1">
-                            <td>January</td>
-                            <td>50,000.00</td>
-                            <td id="table-name">Angela</td>
-                        </tr>
-                        <tr class="q1">
-                            <td>February</td>
-                            <td>10,000.00</td>
-                            <td id="table-name">Roberto</td>
-                        </tr>
-                        <tr class="q1">
-                            <td>March</td>
-                            <td>85,000.00</td>
-                            <td id="table-name">Maria</td>
-                        </tr>
-                        <tr class="q2">
-                            <td>April</td>
-                            <td>56,000.00</td>
-                            <td id="table-name">Stacy</td>
-                        </tr>
-                        <tr class="q2">
-                            <td>May</td>
-                            <td>68,000.00</td>
-                            <td>William</td>
-                        </tr>
-                        <tr class="q2">
-                            <td>June</td>
-                            <td>32,000.00</td>
-                            <td id="table-name">Darrel</td>
-                        </tr>
-                        <tr class="q3">
-                            <td>July</td>
-                            <td>21,000.00</td>
-                            <td id="table-name">Angela</td>
-                        </tr>
-                        <tr class="q3">
-                            <td>August</td>
-                            <td>18,000</td>
-                            <td>Maria</td>
-                        </tr>
-                        <tr class="q3">
-                            <td>September</td>
-                            <td>118,000.00</td>
-                            <td id="table-name">Stacy</td>
-                        </tr>
-                        <tr class="q4">
-                            <td>October</td>
-                            <td>52,000.00</td>
-                            <td id="table-name">Angela</td>
-                        </tr>
-                        <tr class="q4">
-                            <td>November</td>
-                            <td>87,000.00</td>
-                            <td id="table-name">Angela</td>
-                        </tr>
-                        <tr class="q4">
-                            <td>December</td>
-                            <td>121,000.00</td>
-                            <td id="table-name">William</td>
-                        </tr>
-                    </table>
+            <div class="sales-container">
+                <h1>Sales</h1>
+                <div class="filter-labels">
+                    <ul>
+                        <li>Filter by quarter:</li>
+                        <li>
+                            <input value="q1" type="checkbox" name="checkbox" id="checkbox1">
+                            <label for="checkbox1">Q1</label>
+                        <li>
+                            <input value="q2" type="checkbox" name="checkbox" id="checkbox2">
+                            <label for="checkbox2">Q2</label>
+                        </li>
+                        <li>
+                            <input value="q3" type="checkbox" name="checkbox" id="checkbox3">
+                            <label for="checkbox3">Q3</label>
+                        </li>
+                        <li>
+                            <input value="q4" type="checkbox" name="checkbox" id="checkbox4">
+                            <label for="checkbox4">Q4</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="table-container">
+                    <div class="table-wrapper">
+                        <table class="sales-table" id="sales-table">
+                            <tr>
+                                <th>Month</th>
+                                <th class="sales-header" onclick="sortBySales()">Sales</th>
+                                <th class="salesperson-header" onclick="sortByPerson()">Top Salesperson</th>
+                            </tr>
+                            <tr class="q1">
+                                <td>January</td>
+                                <td>$50,000.00</td>
+                                <td>Angela</td>
+                            </tr>
+                            <tr class="q1">
+                                <td>February</td>
+                                <td>$10,000.00</td>
+                                <td>Roberto</td>
+                            </tr>
+                            <tr class="q1">
+                                <td>March</td>
+                                <td>$85,000.00</td>
+                                <td>Maria</td>
+                            </tr>
+                            <tr class="q2">
+                                <td>April</td>
+                                <td>$56,000.00</td>
+                                <td>Stacy</td>
+                            </tr>
+                            <tr class="q2">
+                                <td>May</td>
+                                <td>$68,000.00</td>
+                                <td>William</td>
+                            </tr>
+                            <tr class="q2">
+                                <td>June</td>
+                                <td>$32,000.00</td>
+                                <td>Darrel</td>
+                            </tr>
+                            <tr class="q3">
+                                <td>July</td>
+                                <td>$21,000.00</td>
+                                <td>Angela</td>
+                            </tr>
+                            <tr class="q3">
+                                <td>August</td>
+                                <td>$18,000.00</td>
+                                <td>Maria</td>
+                            </tr>
+                            <tr class="q3">
+                                <td>September</td>
+                                <td>$118,000.00</td>
+                                <td>Stacy</td>
+                            </tr>
+                            <tr class="q4">
+                                <td>October</td>
+                                <td>$52,000.00</td>
+                                <td id="table-name">Angela</td>
+                            </tr>
+                            <tr class="q4">
+                                <td>November</td>
+                                <td>$87,000.00</td>
+                                <td>Angela</td>
+                            </tr>
+                            <tr class="q4">
+                                <td>December</td>
+                                <td>$121,000.00</td>
+                                <td>William</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="script.js"></script>
+        <script src="script.js"></script>
+    </main>
 </body>
 
 </html>
